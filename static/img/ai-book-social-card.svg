@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="mainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0369a1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#mainGrad)"/>
+  
+  <!-- Book shape -->
+  <g transform="translate(200, 100)">
+    <rect x="0" y="0" width="150" height="200" fill="#1e40af" stroke="#ffffff" stroke-width="3" rx="8"/>
+    <rect x="8" y="8" width="134" height="184" fill="#3b82f6" rx="4"/>
+    <!-- Pages -->
+    <line x1="12" y1="30" x2="142" y2="30" stroke="#60a5fa" stroke-width="2"/>
+    <line x1="12" y1="50" x2="142" y2="50" stroke="#60a5fa" stroke-width="2"/>
+    <line x1="12" y1="70" x2="142" y2="70" stroke="#60a5fa" stroke-width="2"/>
+    <line x1="12" y1="90" x2="142" y2="90" stroke="#60a5fa" stroke-width="2"/>
+    <line x1="12" y1="110" x2="142" y2="110" stroke="#60a5fa" stroke-width="2"/>
+    <line x1="12" y1="130" x2="142" y2="130" stroke="#60a5fa" stroke-width="2"/>
+    <line x1="12" y1="150" x2="135" y2="150" stroke="#60a5fa" stroke-width="2"/>
+    <line x1="12" y1="170" x2="135" y2="170" stroke="#60a5fa" stroke-width="2"/>
+  </g>
+  
+  <!-- AI Neural Network -->
+  <g transform="translate(500, 100)">
+    <circle cx="50" cy="50" r="8" fill="#fbbf24" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="150" cy="50" r="8" fill="#fbbf24" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="100" cy="120" r="12" fill="#f97316" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="50" cy="190" r="8" fill="#fbbf24" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="150" cy="190" r="8" fill="#fbbf24" stroke="#ffffff" stroke-width="2"/>
+    
+    <line x1="50" y1="50" x2="100" y2="120" stroke="#ffffff" stroke-width="2.5" opacity="0.8"/>
+    <line x1="150" y1="50" x2="100" y2="120" stroke="#ffffff" stroke-width="2.5" opacity="0.8"/>
+    <line x1="100" y1="120" x2="50" y2="190" stroke="#ffffff" stroke-width="2.5" opacity="0.8"/>
+    <line x1="100" y1="120" x2="150" y2="190" stroke="#ffffff" stroke-width="2.5" opacity="0.8"/>
+  </g>
+  
+  <!-- Checkmark -->
+  <g transform="translate(850, 150)">
+    <circle cx="50" cy="50" r="50" fill="#10b981" stroke="#ffffff" stroke-width="3"/>
+    <path d="M 20 50 L 40 65 L 75 35" stroke="white" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="600" y="380" font-size="48" font-weight="bold" text-anchor="middle" fill="white">AI & Spec-Driven Development</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="430" font-size="28" text-anchor="middle" fill="#dbeafe">Specifications → AI-Generated Code → Auto-Verified</text>
+  
+  <!-- Features -->
+  <g>
+    <text x="150" y="550" font-size="18" font-weight="bold" fill="white">📖 Clear Specs</text>
+    <text x="500" y="550" font-size="18" font-weight="bold" fill="white">🤖 AI Generates</text>
+    <text x="900" y="550" font-size="18" font-weight="bold" fill="white">✓ Auto-Verified</text>
+  </g>
+</svg>

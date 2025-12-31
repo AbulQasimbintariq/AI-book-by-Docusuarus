@@ -2,46 +2,106 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Welcome to **AI-Book-by-Docusaurus** - your guide to **AI & Spec-Driven Software Development**.
 
-## Getting Started
+## What is Spec-Driven Development?
 
-Get started by **creating a new site**.
+Spec-Driven Development is a modern approach where:
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+1. **You write specifications** - Clear, formal descriptions of what your code should do
+2. **AI generates code** - Machine learning models synthesize implementations from specs
+3. **Tests are auto-generated** - Validation happens automatically from spec examples
+4. **Code is verified** - Generated implementations are validated against specs
 
-### What you'll need
+## Why AI + Specs?
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+Traditional development requires manually writing:
 
-## Generate a new site
+- Code implementations
+- Unit tests
+- Documentation
+- Bug fixes
 
-Generate a new Docusaurus site using the **classic template**.
+With **Spec-Driven + AI**:
 
-The classic template will automatically be added to your project after you run the command:
+- **Specs are your source of truth** - Single, clear definition of behavior
+- **AI handles the boilerplate** - Automatic code generation saves time
+- **Tests come free** - Auto-generated from your specifications
+- **Fewer bugs** - Specs are validated before implementation
+- **Self-documenting** - Your specs ARE the documentation
 
-```bash
-npm init docusaurus@latest my-website classic
+## Quick Example
+
+### Write a Specification
+
+```markdown
+## Function: calculateDiscount
+
+### Input
+
+- amount: number (purchase total in dollars)
+- userType: "regular" | "premium" | "vip"
+
+### Output
+
+- number (discount percentage)
+
+### Rules
+
+- Regular users: 0%
+- Premium users: 10% if amount > $50
+- VIP users: 15% always, +5% if amount > $100
+
+### Examples
+
+- calculateDiscount(100, "regular") → 0
+- calculateDiscount(100, "premium") → 10
+- calculateDiscount(150, "vip") → 20
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+### AI Generates Code
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
+```typescript
+function calculateDiscount(amount: number, userType: string): number {
+  if (userType === "regular") return 0;
+  if (userType === "premium") return amount > 50 ? 10 : 0;
+  if (userType === "vip") return amount > 100 ? 20 : 15;
+  return 0;
+}
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+### Tests Auto-Run
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+```typescript
+describe("calculateDiscount", () => {
+  it("regular users get 0%", () => {
+    expect(calculateDiscount(100, "regular")).toBe(0);
+  });
+  it("vip users get bonus on large purchases", () => {
+    expect(calculateDiscount(150, "vip")).toBe(20);
+  });
+});
+```
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+## What You'll Learn Here
+
+This book covers:
+
+- **Core Concepts** - Understanding specs, AI generation, and verification
+- **Practical Workflows** - Step-by-step guides for real projects
+- **Best Practices** - Writing clear specs that generate good code
+- **Examples** - Real-world use cases from simple functions to complex APIs
+- **Tools & Integration** - Using AI assistants like Claude, ChatGPT, and Copilot
+- **Case Studies** - How teams adopted spec-driven development
+
+## Next Steps
+
+👉 **Start with** [AI & Spec-Driven Development](/docs/ai-spec-driven-development) for a comprehensive overview
+
+👉 **Explore chapters** on specific topics in the Documentation sidebar
+
+👉 **Read the blog** for latest insights and tutorials
+
+Happy building! 🚀
